@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0">
+    <display-name>Labbshoppen</display-name>
+    <servlet>
+        <servlet-name>shop</servlet-name>
+        <servlet-class>org.example.web.ShopServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping><servlet-name>shop</servlet-name><url-pattern>/shop/*</url-pattern></servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config><http-only>true</http-only></cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+    <welcome-file-list><welcome-file>index.jsp</welcome-file></welcome-file-list>
+</web-app>
